@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66A3D2"
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/backImage"
+        android:layout_width="350dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_background">
+    </ImageView>
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textSize="42sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_below="@id/lineLayout"
+        android:fontFamily="monospace"/>
+
+        <LinearLayout
+        android:id="@+id/lineLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="24sp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <NumberPicker
+            android:id="@+id/hoursPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <NumberPicker
+            android:id="@+id/minutesPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <NumberPicker
+            android:id="@+id/secondsPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="180dp"
+        android:layout_height="110dp"
+        android:text="Старт"
+        android:layout_below="@id/timerTextView"
+        android:background="@drawable/round_button"
+        android:layout_centerHorizontal="true"
+        android:textSize="22dp"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="  Перезапуск  "
+        android:layout_below="@id/startButton"
+        android:background="@drawable/round_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/moreBackImage"
+        android:layout_below="@id/backImage"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_background">
+    </ImageView>
+
+    <ImageButton
+        android:id="@+id/soundImage"
+        android:layout_below="@id/backImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="90dp"
+        android:background="@drawable/sound">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/groupImage"
+        android:layout_below="@id/backImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="270dp"
+        android:background="@drawable/group">
+    </ImageButton>
+
+</RelativeLayout>
